@@ -37,14 +37,21 @@
 .sidebar{
     background-color: #212529;
     width: 250px;
+    color: rgb(255,255,255,0.5);
+}
+.links > i {
+    padding: 15px;
+}
+.links{
+    display: grid;
+    grid-template-columns: 1fr min-content;
 }
 .sidebar-link{
-    display: block;
     padding: 15px;
     text-decoration: none;
     color: rgb(255,255,255,0.5);
 }
-.sidebar-link:hover{
+.sidebar-link:hover, .sidebar-link:hover + i{
     color: rgb(255,255,255,0.9);
     background-color: rgb(255,255,255,0.05);
 }
@@ -69,6 +76,12 @@
     color: #fff;
     border-radius: 5px;
     padding: 15px;
+}
+.card-section > ul{
+    padding-left: 15px;
+}
+.card-section > h1{
+    padding-bottom: 5px;
 }
 .red{
     background-color: #DB4437;
