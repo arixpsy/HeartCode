@@ -163,6 +163,45 @@ Photo Used: https://unsplash.com/photos/VIv0srmK78g from bady qb on Unsplash.
     ```
 8. You will notice that the top cell does not cover the entire row. To fix this, use the colspan attribute on the ```th``` tag itself.
 
+    ```<th colspan="3">Review my Teacher</th>```
+
+    * colspan tells the browser to allocate 3 column spaces for that cell.
 
 
+    * Without colspan:
+    <table>
+        <tr>
+            <th>Review my Teacher</th>
+        </tr>
+        <tr>
+            <td>Teacher</td>
+            <td>Subject</td>
+            <td>Rating 1~10</td>
+        </tr>
+        <tr>
+            <td>Mr Lim</td>
+            <td>Science</td>
+            <td>9</td>
+        </tr>
+    </table>
+    
+    * With colspan:
+    <table>
+        <tr>
+            <th colspan="3">Review my Teacher</th>
+        </tr>
+        <tr>
+            <td>Teacher</td>
+            <td>Subject</td>
+            <td>Rating 1~10</td>
+        </tr>
+        <tr>
+            <td>Mr Lim</td>
+            <td>Science</td>
+            <td>9</td>
+        </tr>
+    </table>
 
+9. The finished table should look something like this :point_down:
+
+![alt text](https://raw.githubusercontent.com/arixpsy/HeartCode/master/README/Exercise3.png)
