@@ -205,15 +205,3 @@ Photo Used: https://unsplash.com/photos/VIv0srmK78g from bady qb on Unsplash.
 9. The finished table should look something like this :point_down:
 
 ![alt text](https://raw.githubusercontent.com/arixpsy/HeartCode/master/README/Exercise3.png)
-
-## Exercise 4(Icons and CSS)
-
-1. Look for the div with the class of "card-section yellow". Inside, you should be able to find a header tag of "Tables".
-    ```html
-    <div class="card-section green">
-        <h1>Icons and CSS</h1>
-        <p>Insert anything you want here</p>
-    </div>
-    ```
-
-2. 
