@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/scripts/tod.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    
+    <title>Truth or Dare</title>
+</head>
+<body>
+    <h2>Truth or Dare</h2>
+    <div id="question"></div>
+
+    <!-- jQuery logic will be activated when the button is pressed -->
+    <!-- <button class="btn-success" id="getdata">Get data!</button>
+    <div class="errors"></div>
+    <div class="dataview"></div> -->
+
+    <script>
+        response = {
+            v: 0,
+            c: 0
+        }
+        let lastnum = -1;
+        let type = "truth";
+
+        setInterval(() => {
+            $.ajax({
+            url: `http://172.20.10.2:1880/test`,
+            success: function(response) {
+                //$('.dataview').text(JSON.stringify(response));
+                console.log(JSON.stringify(response))
+                lastnum = response['count']
+                if(response['result'] == 1){
+                    type = "truth";
+                }else{
+                    type= "dare";
+                }
+                if(response['count'] != lastnum){
+                console.log(type);
+                document.getElementById('question').innerHTML = tod[type][Math.floor(Math.random() * tod[type].length)];
+                lastnum = response['count'];
+            }
+            },
+            error: function() {
+                $('#errors').text("There was an error processing your request. Please try again.");
+            }
+            });
+
+
+        }, 2000);    
+    </script>
+</body>
+</html>

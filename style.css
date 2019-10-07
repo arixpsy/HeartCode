@@ -60,7 +60,7 @@
     overflow-y: scroll;
 }
 .title-bar{
-    margin: 15px;
+    margin: 15px 15px;
     background-color: #e9ecef;
     font-size: 1.25rem;
     padding: 15px;
