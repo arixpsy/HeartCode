@@ -292,7 +292,7 @@ JavaScript within HTML
 ```html
 <script>
     alert("hello");
-<script>
+</script>
 ```
 
 External JavaScript File
@@ -340,8 +340,8 @@ alert("Hello")
 **JavaScript**
 ```javascript
 document.getElementById("elementID").innerHTML = "Hello World!";
-document.getElementByClassName("empty").innerHTML = "";
-document.getElementByTagName("p").innerHTML = "Longer Content"
+document.getElementsByClassName("empty").innerHTML = "";
+document.getElementsByTagName("p").innerHTML = "Longer Content"
 ```
 
 <hr>
@@ -356,7 +356,7 @@ document.getElementByTagName("p").innerHTML = "Longer Content"
 ### API Calls using JQuery
 
 ```html
-<button onclick="executeCall()">HELLO</button>
+<button onclick="executeCall()">Get Coordinates</button>
 <div id="data"></div>
 ```
 
