@@ -1,5 +1,9 @@
 # HTML Cheat Sheet 📃
 
+### Quick links
+[HTML/CSS/JS Online Cheatsheet](https://htmlcheatsheet.com/)
+[Link to find free images](https://unsplash.com/)
+
 ### Document Outline
 |Tag|Description|
 |-|-|
