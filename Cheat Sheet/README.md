@@ -168,21 +168,174 @@
 
 # CSS
 ### Including CSS
+Inline CSS
+```html
+<p style="color: red;">Text</p>
+```
 
-### Tag styling
-### class styling
-### id styling
+CSS within HTML
+```html
+<head>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+```
 
-### Text formatting
+External CSS file
+```html
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" >
+</head>
+```
 
-### Font Styling
+<hr>
+
+### Selectors
+|Selector|Description|
+|-|-|
+|div|Apply CSS rules to ALL div tags|
+|p, h1|Apply CSS rules to ALL p and h1 tags|
+|#identifier|Apply CSS rules to the element with ID "identifier"|
+|.className|Apply CSS rules to ALL elements with class "className"|
+
+**HTML**
+```html
+<div>
+    <h1 id="myHeader">Title</h1>
+    <p class="smallText">Long Description</p>
+</div>
+```
+**CSS**
+```css
+div {
+    background-color: blue;
+}
+p, h1 {
+    color: gray;
+}
+#myHeader{
+    text-decoration: underline;
+}
+.smallText{
+    font-size: 8px;
+}
+```
+
+<hr>
+
+### Text Styling
+|CSS Property|Description|Values|
+|-|-|-|
+|font-family|Change the font used|Helvetic, Arial, etc.|
+|font-size|Change text size|60px, 10rem, 12em|
+|color|Change text color|black, red, #FFFFFF, etc|
+|font-weight|Change how bold the text is|bold, 100, 200|
+|text-decoration|Change effects on text|underline, none|
+|text-align|Change how the text is aligned|center, right, left|
+|text-transform|Format the text|uppercase, lowercase, capitalize|
+|vertical-align|Align relative to baseline|text-top|
+
+<hr>
+
+### Border Styling
+|CSS Property|Description|Values|
+|-|-|-|
+|border|Sets border style for all borders, in the format: border: (solid, dashed, dotted, double) (width) (color)|"solid 1px black"|
+|border-top|Sets border style for the top of the element|10px,5px|
+|border-bottom|Sets border style for the bottom of the element|10px,5px|
+|border-right|Sets border style for the right side of the element|10px,5px|
+|border-left|Sets border style for the left side of the element|10px,5px|
+|border-color|Sets the color for the borders|red,black,#FFFFFF|
+
+<hr>
+
+### List Styling
+|CSS Property|Description|Values|
+|-|-|-|
+|list-style-type|Sets sytle of bullets|square,circle,decimal|
+|list-style-postion|Sets how text wraps when bulleted|outside, inside|
+
+<hr>
+
+### Width and Height  
+|CSS Property|Description|Values|
+|-|-|-|
+|width|sets the width of an element|auto, 20px, 10%|
+|height|sets the height of an element|auto, 20px, 10%|
+
+<hr>
 
 ### Background Styling
+|CSS Property|Description|Values|
+|-|-|-|
+|background-color|Sets background color of an element|blue, #FFF, gray|
+|background-image|Sets background image to use as the background of an element|url("img.png")|
+|background-position|Sets the position of the background image|right top|
 
-### Box Model
+<hr>
 
-### Google Fonts
+### Font Awesome CDN and Usage
+Look here :point_down:
+[Font Awesome Website](https://fontawesome.com/)
+```html
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+```
 
-### Font Awesome
+<hr>
 
 # JavaScript
+### Including JavaScript
+JavaScript within HTML
+```html
+<script>
+    alert("hello");
+<script>
+```
+
+External JavaScript File
+```html
+<script src="filename.js"></script>
+```
+
+### Variables
+```javascript
+var age = 23
+
+var name = "Peter"
+
+var isHappy = true
+
+var inMyBag = ["item1", "item2", "item3"]
+
+var myProfile = {"name":"Tim", "age":30, "gender": "male"}
+```
+
+### Output
+Output in console
+```javascript
+console.log("Hello")
+```
+
+Dialog Alert
+```javascript
+alert("Hello")
+```
+
+### Edit HTML Element by ID
+**HTML**
+```html
+<div id="elementID"></div>
+```
+**JavaScript**
+```javascript
+document.getElementById("elementID").innerHTML = "Hello World!";
+```
+### JQuery CDN and Usage
+```html
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+```
+
+### API Calls
