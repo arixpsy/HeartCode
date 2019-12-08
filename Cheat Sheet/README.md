@@ -300,6 +300,8 @@ External JavaScript File
 <script src="filename.js"></script>
 ```
 
+<hr>
+
 ### Variables
 ```javascript
 var age = 23
@@ -313,6 +315,8 @@ var inMyBag = ["item1", "item2", "item3"]
 var myProfile = {"name":"Tim", "age":30, "gender": "male"}
 ```
 
+<hr>
+
 ### Output
 Output in console
 ```javascript
@@ -324,18 +328,47 @@ Dialog Alert
 alert("Hello")
 ```
 
-### Edit HTML Element by ID
+<hr>
+
+### Edit HTML Element
 **HTML**
 ```html
 <div id="elementID"></div>
+<p class="empty">Content</p>
+<p>Content</p>
 ```
 **JavaScript**
 ```javascript
 document.getElementById("elementID").innerHTML = "Hello World!";
+document.getElementByClassName("empty").innerHTML = "";
+document.getElementByTagName("p").innerHTML = "Longer Content"
 ```
-### JQuery CDN and Usage
+
+<hr>
+
+### JQuery CDN
 ```html
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 ```
 
-### API Calls
+<hr>
+
+### API Calls using JQuery
+
+```html
+<button onclick="executeCall()">HELLO</button>
+<div id="data"></div>
+```
+
+```javascript
+function executeCall(){
+            $.ajax({
+                url:`http://api.openweathermap.org/data/2.5/weather?q=singapore&appid=f8902851e74fc975f746a7cfae3f7697`,
+                success: function(response){
+                    var longitude = response.coord.lon;
+                    var latitude = response.coord.lat;
+                    document.gestElementById('data').innerHTML = longtitude + ", " + latitude  
+                }
+            })
+        }
+```
