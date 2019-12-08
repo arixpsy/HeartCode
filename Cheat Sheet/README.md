@@ -367,7 +367,7 @@ function executeCall(){
                 success: function(response){
                     var longitude = response.coord.lon;
                     var latitude = response.coord.lat;
-                    document.gestElementById('data').innerHTML = longtitude + ", " + latitude  
+                    document.getElementById('data').innerHTML = longtitude + ", " + latitude  
                 }
             })
         }
