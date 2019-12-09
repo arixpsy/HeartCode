@@ -345,8 +345,8 @@ alert("Hello")
 **JavaScript**
 ```javascript
 document.getElementById("elementID").innerHTML = "Hello World!";
-document.getElementsByClassName("empty").innerHTML = "";
-document.getElementsByTagName("p").innerHTML = "Longer Content"
+document.getElementsByClassName("empty")[0].innerHTML = "";
+document.getElementsByTagName("p")[0].innerHTML = "Longer Content"
 ```
 
 <hr>
